@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>레드향 주문하기</title>
+    </head>
+    <body>
+        <h1>레드향 주문하기</h1>
+        <form>
+            <fieldset>
+                <legend>상품 선택</legend> <!--legend : field의 제목-->
+                <p><b>주문할 상품을 선택해 주세요.</b></p>
+                <label><input type="checkbox" value="s_3">선물용 3kg</label> <!--value: 체크박스나 라디오 버튼의 리턴값 지정-->
+                <label><input type="checkbox" value="s_5">선물용 5kg</label>
+                <label><input type="checkbox" value="f_3">가정용 3kg</label>
+                <label><input type="checkbox" value="f_5">가정용 5kg</label>
+
+                <p><b>포장 선택</b></p>
+                <label><input type="radio" name="gift" value="yes">선물 포장</label> <!--name이 같아야 같은 항목의 radio임을 알 수 있음-->
+                <label><input type="radio" name="gift" value="no">선물 포장 안 함</label>
+            </fieldset> <!--fieldset : 하나의 폼 안에서 구역을 나누어 표시-->
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul>
+                    <li>
+                        <label for="user-name">이름</label>
+                        <input type="text" id="user-name">
+                    </li>
+                    <li>
+                        <label for="addr">배송 주소</label>
+                        <input type="text" id="address">
+                    </li>
+                    <li>
+                        <label for="mail">이메일 주소</label>
+                        <input type="email" id="mail">
+                    </li>
+                    <li>
+                        <label for="phone">연락처</label>
+                        <input type="tel" id="phone"> <!--for과 id를 연결해야함-->
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </body>
+</html>
