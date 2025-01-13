@@ -19,9 +19,15 @@
                         <label><input type="checkbox" value="s_5">선물용 5kg</label>
                         <input type="number" min="0" max="3" value="1">개 (최대 3개)
                     </li>
+                    <li>
+                        <label><input type="checkbox" value="f_3">가정용 3kg</label>
+                        <input type="range" min="0" max="5">개 (최대 5개)
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="f_5">가정용 5kg</label>
+                        <input type="range" min="0" max="3" value="1">개 (최대 3개)
+                    </li>
                 </ul>
-                <label><input type="checkbox" value="f_3">가정용 3kg</label>
-                <label><input type="checkbox" value="f_5">가정용 5kg</label>
 
                 <p><b>포장 선택</b></p>
                 <label><input type="radio" name="gift" value="yes">선물 포장</label> <!--name이 같아야 같은 항목의 radio임을 알 수 있음-->
@@ -46,8 +52,21 @@
                         <label for="phone">연락처</label>
                         <input type="tel" id="phone"> <!--for과 id를 연결해야함-->
                     </li>
+                    <li>
+                        <label for="date">배송 지정 (주문일로부터 최소 3일 이후)</label>
+                        <input type="datetime-local">
+                    </li>
                 </ul>
             </fieldset>
+            <div>
+                <input type="submit" value="주문하기">
+                <input type="reset" value="취소하기">
+                <!--그냥
+                 <input type="submit" value="주문하기">
+                <input type="reset" value="취소하기">
+                라고만 해도 될 것 같은데 div로 묶은 이유는 관리 및 이해의 도움 때문인 듯
+                -->
+            </div>
         </form>
     </body>
 </html>
