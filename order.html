@@ -3,35 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>레드향 주문하기</title>
+        <link rel="stylesheet" href="order.css">
     </head>
     <body>
         <h1>레드향 주문하기</h1>
-        <form>
+        <form action="">
             <fieldset>
-                <legend>상품 선택</legend> <!--legend : field의 제목-->
+                <legend>상품 주문</legend> <!--legend : field의 제목-->
                 <p><b>주문할 상품을 선택해 주세요.</b></p>
-                <ul>
-                    <li>
-                        <label><input type="checkbox" value="s_3">선물용 3kg</label> <!--value: 체크박스나 라디오 버튼의 리턴값 지정-->
-                        <input type="number" min="0" max="5">개 (최대 5개) <!--number: 스핀박스-->
-                    </li>
-                    <li>
-                        <label><input type="checkbox" value="s_5">선물용 5kg</label>
-                        <input type="number" min="0" max="3" value="1">개 (최대 3개)
-                    </li>
-                    <li>
-                        <label><input type="checkbox" value="f_3">가정용 3kg</label>
-                        <input type="range" min="0" max="5">개 (최대 5개)
-                    </li>
-                    <li>
-                        <label><input type="checkbox" value="f_5">가정용 5kg</label>
-                        <input type="range" min="0" max="3" value="1">개 (최대 3개)
-                    </li>
-                </ul>
+                        <!--value: 체크박스나 라디오 버튼의 리턴값 지정-->
+                        <!--number: 스핀박스-->
+                <label for="prod1">상품 선택</label>
+                <select id="prod1">
+                    <option value="special_3" selected>선물용 3KG</option>
+                    <option value="special_5">선물용 5KG</option>
+                    <option value="family_3">가정용 3KG</option>
+                    <option value="family_5">가정용 5KG</option>
+                </select>
 
-                <p><b>포장 선택</b></p>
-                <label><input type="radio" name="gift" value="yes">선물 포장</label> <!--name이 같아야 같은 항목의 radio임을 알 수 있음-->
-                <label><input type="radio" name="gift" value="no">선물 포장 안 함</label>
+                <label for="prod2">포장 여부</label>
+                <input type="text" id="prod2" list="pack"> <!--label과 input은 for-id로 연결. input과 datalist는 list-id로 연결-->
+                <datalist id="pack">
+                    <option value="package">선물 포장</option>
+                    <option value="no_package">포장 안 함</option>
+                </datalist>
+
+                <!--name이 같아야 같은 항목의 radio임을 알 수 있음-->
             </fieldset> <!--fieldset : 하나의 폼 안에서 구역을 나누어 표시-->
             <fieldset>
                 <legend>배송 정보</legend>
@@ -69,13 +66,18 @@
                     </li>
                     <li>
                         <label for="memo">메모</label>
-                        <textarea id="memo"></textarea>
+                        <textarea id="memo" cols="40" rows="4"></textarea>
+                        <!--cols: 가로 글자 수. rows: 세로 줄 수-->
                     </li>
                 </ul>
             </fieldset>
             <div>
+                <button type="submit">주문하기</button>
+                <button type="reset">취소하기</button>
+                <!--
                 <input type="submit" value="주문하기">
                 <input type="reset" value="취소하기">
+                -->
                 <!--그냥
                  <input type="submit" value="주문하기">
                 <input type="reset" value="취소하기">
