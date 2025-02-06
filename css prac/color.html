@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>상품 소개 페이지</title>
+        <style>
+            body {
+                background: url('../images/bg.jpg') no-repeat fixed;
+                background-size: cover;
+                text-align: center;
+            }
+            h1 {
+                color: #0000ff; /*16진수 표기*/
+            }
+            p {
+                color: green; /*색상 이름으로 표기*/
+            }
+            .accent {
+                color: hsl(0, 100%, 50%); /*hsl 표기법(색상, 채도, 명도)*/
+                font-weight: bold;
+            }
+            .color1 {
+                color: rgb(255, 255, 255); /*rgb 표기. 흰색*/
+            }
+            .color2 {
+                color: rgba(255, 255, 255, 0.5); /*rgba 표기. 반투명한 흰색*/
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>레드향</h1>
+            <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+            <p class="color1">레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+            <p class="color2">비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+        </div>
+    </body>
+</html>
